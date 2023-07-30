@@ -48,7 +48,7 @@ def main():
     tenure_group_1to12=st.selectbox("tenure group:12 months",["Yes", "No"])
 
     if st.button("Predict"):
-        prediction = predict_churn([PhoneService_No,InternetService_No, OnlineSecurity_No,StreamingMovies_Yes, Contract_Month_to_month,Contract_One_year,Contract_Two_year, tenure_group_1to12])
+        prediction = predict_churn(PhoneService_No,InternetService_No, OnlineSecurity_No,StreamingMovies_Yes, Contract_Month_to_month,Contract_One_year,Contract_Two_year, tenure_group_1to12)
 
         if prediction == 0:
             st.success("Customer is not likely to churn")
